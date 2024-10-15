@@ -17,7 +17,8 @@
 
     //verifica se usuário realmente já possui conta
     if (novoUsuario != null) {
-        response.sendRedirect("login.html");
+        session.setAttribute("usuario", username);
+        response.sendRedirect("login.jsp");
         //se não redireciona para outra tela
     } else {
         response.sendRedirect("semconta.html");
